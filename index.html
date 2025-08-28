@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AHMS — Project Replica (Inline CSS)</title>
+  <style>
+   *{
+    margin: 0;
+    padding: 0;
+   }
+    .navigation-button button{
+      border-radius: 8px;
+      font-size: 16px;
+      padding: 8px 16px;
+      border: none;
+      background-color: rgb(12, 154, 219);
+    }
+    .navigation-button button a{
+     text-decoration: none;
+     color: rgb(255, 255, 255);
+    }
+    .navigation-button button:hover{
+     background-color: green;
+     color: white;
+      border: none;
+      transition: 0.8s;
+    }
+    body{
+      background-color: #25c43a;
+      background-image: url(../demo-medical-hero-banner-bg.jpg);
+    }
+  </style>
+</head>
+<body>
+  <!-- style="margin:0;font-family:Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial; background:#e2f3ee;color:#0b1220;" -->
+  <!-- Header -->
+  <header style="position:sticky;top:0;z-index:50;background:linear-gradient(90deg,#0ea5e9,#06b6d4);color:#fff;padding:18px 16px;box-shadow:0 6px 20px rgba(2,6,23,.12);">
+    <div style="max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:16px;">
+      <div style="display:flex;align-items:center;gap:20px;">
+        <!-- <div style="width:44px;height:44px;border-radius:10px;background:rgba(255,255,255,.18);display:flex;align-items:center;justify-content:center;font-weight:700;">🐾</div> -->
+         <div><img src="LogoPet.jpg" alt="" style="width: 60px; border-radius: 50%; border: 3px solid rgb(107, 100, 99);"></div>
+        <div>
+          <h1 style="margin:0;font-size:18px;letter-spacing:.2px;font-weight:700;">AHMS</h1>
+          <div style="font-size:11px;opacity:.95;">Premium veterinary services — Uttara, Dhaka</div>
+        </div>
+      </div>
+      <nav style="margin-left:auto;display:flex;gap:8px;align-items:center;">
+        <a href="Vets.html" style="text-decoration:none;color:#fff;padding:8px 12px;border-radius:8px;font-weight:600;">Vets</a>
+        <a href="animalwiki.html" style="text-decoration:none;color:#fff;padding:8px 12px;border-radius:8px;font-weight:600;">Animalwiki</a>
+        <a href="#services" style="text-decoration:none;color:#fff;padding:8px 12px;border-radius:8px;font-weight:600;">Services</a>
+        <a href="#gallery" style="text-decoration:none;color:#fff;padding:8px 12px;border-radius:8px;font-weight:600;">Gallery</a>
+        <a href="#appointment" style="text-decoration:none;color:#fff;padding:8px 12px;border-radius:8px;font-weight:600;">Book</a>
+        <a href="#contact" style="text-decoration:none;color:#fff;padding:8px 12px;border-radius:8px;font-weight:600;">Contact</a>
+        <div class="navigation-button">
+          <button style="margin-right: 8px;"><a href="Login.html">Login</a></button>
+          <button><a href="Register.html">Register</a></button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section style="max-width:1100px;margin:26px auto;padding:0 16px;">
+    <div style="background:#ffffff;border-radius:14px;box-shadow:0 12px 30px rgba(2,6,23,.06);display:flex;gap:18px;overflow:hidden;align-items:center;">
+      <div style="flex:1;padding:28px;">
+        <h2 style="margin:0 0 10px 0;font-size:26px;color:#0b1220;">Experience premium care for your furry friends</h2>
+        <p style="margin:0 0 16px 0;color:#334155;font-size:15px;line-height:1.5;">AHMS offers routine checkups, vaccinations, surgery, grooming, diagnostics (ultrasound & X‑ray), dental care, boarding, and emergency services — all with compassionate, professional vets.</p>
+        <div style="display:flex;gap:10px;">
+          <a href="#appointment" style="text-decoration:none;background:#0b1220;color:#fff;padding:10px 14px;border-radius:10px;font-weight:700;">Book Appointment</a>
+          <a href="tel:+8801610349668" style="text-decoration:none;border:2px solid #0b1220;color:#0b1220;padding:10px 14px;border-radius:10px;font-weight:700;">Call +8801610349668</a>
+        </div>
+        <div style="margin-top:14px;font-size:13px;color:#475569;">Address: House XX, Road XX, Sector XX, Uttara, Dhaka · Email: <a href="mailto:cse2130203@adust.edu.bd">cse2130203@adust.edu.bd</a></div>
+      </div>
+      <div style="width:420px;min-height:240px;background:linear-gradient(180deg,#eef2ff, #f8fafc);display:flex;align-items:center;justify-content:center;padding:18px;">
+        <!-- Placeholder image area -->
+        <div style="width:360px;height:220px;border-radius:10px;background-image:url('https://images.unsplash.com/photo-1543852786-1cf6624b9987?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&s=');background-size:cover;background-position:center;box-shadow:0 8px 20px rgba(2,6,23,.08);"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" style="max-width:1100px;margin:20px auto;padding:0 16px;">
+    <h3 style="margin:0 0 12px 2px;font-size:18px;color:#0b1220;">Services</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;">
+      <div style="background:#fff;padding:14px;border-radius:12px;box-shadow:0 8px 22px rgba(2,6,23,.04);">
+        <div style="font-weight:700;margin-bottom:6px;font-size:15px;">Routine Check‑up & Vaccination</div>
+        <div style="font-size:13px;color:#475569;">Complete wellness exams, vaccination schedules, parasite control.</div>
+      </div>
+      <div style="background:#fff;padding:14px;border-radius:12px;box-shadow:0 8px 22px rgba(2,6,23,.04);">
+        <div style="font-weight:700;margin-bottom:6px;font-size:15px;">Surgery & Dental Care</div>
+        <div style="font-size:13px;color:#475569;">Soft‑tissue surgery, spay/neuter, dental cleaning & extractions.</div>
+      </div>
+      <div style="background:#fff;padding:14px;border-radius:12px;box-shadow:0 8px 22px rgba(2,6,23,.04);">
+        <div style="font-weight:700;margin-bottom:6px;font-size:15px;">Diagnostics</div>
+        <div style="font-size:13px;color:#475569;">In‑house bloodwork, ultrasound, X‑ray for fast diagnosis.</div>
+      </div>
+      <div style="background:#fff;padding:14px;border-radius:12px;box-shadow:0 8px 22px rgba(2,6,23,.04);">
+        <div style="font-weight:700;margin-bottom:6px;font-size:15px;">Grooming & Boarding</div>
+        <div style="font-size:13px;color:#475569;">Professional grooming, safe overnight boarding with supervision.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About / Vet Credentials -->
+  <section style="max-width:1100px;margin:20px auto;padding:0 16px;">
+    <div style="display:flex;gap:14px;flex-wrap:wrap;">
+      <div style="flex:1;min-width:280px;background:#fff;padding:16px;border-radius:12px;box-shadow:0 10px 26px rgba(2,6,23,.04);">
+        <h4 style="margin:0 0 8px 0;font-size:16px;color:#0b1220;">About AHMS</h4>
+        <p style="margin:0;color:#475569;font-size:14px;line-height:1.5;">Established in 2019, AHMS provides compassionate, modern veterinary services in Uttara, Dhaka. Our team is led by <strong>Dr. Tayabur Rahman, DVM (PSTU), MS (BAU), PGD (Avian Disease)</strong>. We prioritize painless procedures (laser surgery), fast diagnostics, and clear communication with owners.</p>
+      </div>
+      <div style="width:320px;background:#fff;padding:16px;border-radius:12px;box-shadow:0 10px 26px rgba(2,6,23,.04);">
+        <h4 style="margin:0 0 8px 0;font-size:15px;color:#0b1220;">Clinic Info</h4>
+        <div style="font-size:13px;color:#475569;line-height:1.6;">
+          <div><strong>Address:</strong> House 72, Road 11, Sector 14, Uttara, Dhaka</div>
+          <div><strong>Phone:</strong> <a href="tel:+8801610349668">+8801610349668</a></div>
+          <div><strong>Email:</strong> <a href="mailto:cse2130203@adust.edu.bd">cse2130203@adust.edu.bd</a></div>
+          <div><strong>Hours:</strong> Sat–Thu: 9am–9pm · Fri: Closed</div>
+          <div style="margin-top:8px;"><a href="#contact" style="text-decoration:none;background:#0ea5e9;color:#fff;padding:8px 12px;border-radius:8px;font-weight:700;">Get Directions</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery" style="max-width:1100px;margin:20px auto;padding:0 16px;">
+    <h3 style="margin:0 0 12px 2px;font-size:18px;color:#0b1220;">Gallery</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;">
+      <div style="background:#fff;border-radius:10px;padding:6px;overflow:hidden;box-shadow:0 8px 20px rgba(2,6,23,.03);">
+        <div style="height:120px;background-image:url('https://images.unsplash.com/photo-1517423440428-a5a00ad493e8?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=');background-size:cover;background-position:center;border-radius:8px;"></div>
+      </div>
+      <div style="background:#fff;border-radius:10px;padding:6px;overflow:hidden;box-shadow:0 8px 20px rgba(2,6,23,.03);">
+        <div style="height:120px;background-image:url('https://images.unsplash.com/photo-1546182990-dffeafbe841d?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=');background-size:cover;background-position:center;border-radius:8px;"></div>
+      </div>
+      <div style="background:#fff;border-radius:10px;padding:6px;overflow:hidden;box-shadow:0 8px 20px rgba(2,6,23,.03);">
+        <div style="height:120px;background-image:url('https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=');background-size:cover;background-position:center;border-radius:8px;"></div>
+      </div>
+      <div style="background:#fff;border-radius:10px;padding:6px;overflow:hidden;box-shadow:0 8px 20px rgba(2,6,23,.03);">
+        <div style="height:120px;background-image:url('https://images.unsplash.com/photo-1558788353-f76d92427f16?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=');background-size:cover;background-position:center;border-radius:8px;"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Appointment Form -->
+  <section id="appointment" style="max-width:1100px;margin:28px auto;padding:0 16px;">
+    <div style="background:#fff;padding:16px;border-radius:12px;box-shadow:0 12px 30px rgba(2,6,23,.05);display:flex;gap:16px;flex-wrap:wrap;align-items:flex-start;">
+      <div style="flex:1;min-width:260px;">
+        <h3 style="margin:0 0 10px 0;font-size:18px;color:#0b1220;">Book an Appointment</h3>
+        <p style="margin:0 0 12px 0;color:#475569;font-size:14px;">Fill this form and we'll confirm by phone. (Demo: no backend in this project.)</p>
+        <form id="apptForm" style="display:flex;flex-direction:column;gap:10px;">
+          <input required name="name" placeholder="Your name" style="padding:10px;border-radius:8px;border:1px solid #e6eef8;outline:none;font-size:14px;" />
+          <input required name="phone" placeholder="Phone number" style="padding:10px;border-radius:8px;border:1px solid #e6eef8;outline:none;font-size:14px;" />
+          <select required name="service" style="padding:10px;border-radius:8px;border:1px solid #e6eef8;font-size:14px;">
+            <option value="">Select service</option>
+            <option>Routine Checkup</option>
+            <option>Surgery</option>
+            <option>Grooming</option>
+            <option>Diagnostics</option>
+          </select>
+          <input required type="date" name="date" style="padding:10px;border-radius:8px;border:1px solid #e6eef8;font-size:14px;" />
+          <textarea name="note" placeholder="Brief note (symptoms, pet age, breed)" style="padding:10px;border-radius:8px;border:1px solid #e6eef8;font-size:14px;min-height:80px;"></textarea>
+          <div style="display:flex;gap:8px;">
+            <button type="submit" style="background:#0b1220;color:#fff;padding:10px 14px;border-radius:8px;border:none;font-weight:700;">Submit</button>
+            <button type="button" id="payBtn" style="background:#06b6d4;color:#0b1220;padding:10px 14px;border-radius:8px;border:none;font-weight:700;">Pay Online (Demo)</button>
+          </div>
+        </form>
+        <div id="apptMsg" style="margin-top:10px;font-size:13px;color:#065f46;display:none;">Appointment received — we'll call to confirm.</div>
+      </div>
+
+      <div style="width:360px;min-width:240px;background:#f8fafc;padding:14px;border-radius:10px;">
+        <h4 style="margin:0 0 8px 0;font-size:15px;color:#0b1220;">Consultation Fees (Sample)</h4>
+        <div style="font-size:14px;color:#475569;line-height:1.6;">
+          <div>Consultation: 500–800 BDT</div>
+          <div>Vaccination: 200–500 BDT</div>
+          <div>Grooming: From 700 BDT</div>
+          <div>Minor Surgery: From 1500 BDT</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section style="max-width:1100px;margin:20px auto;padding:0 16px;">
+    <h3 style="margin:0 0 12px 2px;font-size:18px;color:#0b1220;">What clients say</h3>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;">
+      <div style="background:#fff;padding:14px;border-radius:12px;box-shadow:0 8px 20px rgba(2,6,23,.03);min-width:220px;flex:1;">
+        <div style="font-size:14px;color:#475569;">“The team took great care of my Labrador after surgery. Quick, professional, and kind.”</div>
+        <div style="margin-top:10px;font-weight:700;color:#0b1220;">— Amina H.</div>
+      </div>
+      <div style="background:#fff;padding:14px;border-radius:12px;box-shadow:0 8px 20px rgba(2,6,23,.03);min-width:220px;flex:1;">
+        <div style="font-size:14px;color:#475569;">“Grooming was excellent — they handled my anxious cat gently.”</div>
+        <div style="margin-top:10px;font-weight:700;color:#0b1220;">— Rafiq M.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" style="max-width:1100px;margin:20px auto 60px;padding:0 16px;">
+    <div style="display:flex;gap:14px;flex-wrap:wrap;">
+      <div style="flex:1;min-width:260px;background:#fff;padding:16px;border-radius:12px;box-shadow:0 10px 26px rgba(2,6,23,.04);">
+        <h4 style="margin:0 0 8px 0;font-size:16px;color:#0b1220;">Contact & Directions</h4>
+        <div style="font-size:14px;color:#475569;line-height:1.6;">
+          <div><strong>Address:</strong> Kalpar, Sector 15, Uttara, Dhaka</div>
+          <div><strong>Phone:</strong> <a href="tel:+8801610349668">+8801610349668</a></div>
+          <div><strong>Email:</strong> <a href="mailto:cse2130203@adust.edu.bd">cse2130203@adust.edu.bd</a></div>
+          <div style="margin-top:8px;"><a href="https://www.google.com/maps/place/Atish+Dipankar+University+of+Science+%26+Technology/@23.8713888,90.3791531,17z/data=!3m1!4b1!4m6!3m5!1s0x3755c40fe5215973:0x101646507bc3503!8m2!3d23.871384!4d90.3837665!16s%2Fg%2F11hbkqh3m6?entry=ttu&g_ep=EgoyMDI1MDgyNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" style="text-decoration:none;background:#0ea5e9;color:#fff;padding:8px 12px;border-radius:8px;font-weight:700;">Open in Google Maps</a></div>
+        </div>
+      </div>
+
+      <div style="width:520px;min-width:240px;border-radius:12px;overflow:hidden;box-shadow:0 10px 26px rgba(2,6,23,.04);">
+        <!-- Map iframe (static link) -->
+       <iframe
+  src="https://www.google.com/maps?q=Atish+Dipankar+University+of+Science+and+Technology+Dhaka&output=embed"
+  style="width:100%;height:300px;border:0;display:block;"
+  allowfullscreen=""
+  loading="lazy"
+  referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="background:#0b1220;color:#cfe6f3;padding:24px 16px;">
+    <div style="max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;">
+      <div>
+        <div style="font-weight:800;">AHMS</div>
+        <div style="font-size:13px;opacity:.9;">House 72, Road 11, Sector 14, Uttara, Dhaka · +8801610349668</div>
+      </div>
+      <div style="font-size:13px;opacity:.9;">© 2025 AHMS — Project Replica. For academic use only.</div>
+    </div>
+  </footer>
+
+  <!-- Inline JS -->
+  <script>
+    // Simple form demo
+    document.getElementById('apptForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      // show message
+      document.getElementById('apptMsg').style.display = 'block';
+      // reset form for demo
+      e.target.reset();
+      setTimeout(()=>{document.getElementById('apptMsg').style.display = 'none';},5000);
+    });
+
+    // Pay button demo (opens a modal-like confirm)
+    document.getElementById('payBtn').addEventListener('click', function(){
+      const ok = confirm('This is a demo Pay Online flow for the project. Proceed to simulated payment?');
+      if(ok){ alert('Simulated payment complete (demo).'); }
+    });
+  </script>
+</body>
+</html>
