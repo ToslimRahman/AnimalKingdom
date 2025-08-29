@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
+   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>AHMS — Project Replica (Inline CSS)</title>
   <style>
@@ -29,6 +29,55 @@
     body{
       background-color: #25c43a;
       background-image: url(demo-medical-hero-banner-bg.jpg);
+    }
+
+    /* ------------------------------
+       📱 Mobile Responsive Styles
+       ------------------------------ */
+    @media (max-width: 768px) {
+      header div {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-left: 0 !important;
+      }
+
+      .navigation-button {
+        margin-top: 6px;
+      }
+
+      section > div {
+        flex-direction: column !important;
+      }
+
+      /* Hero image scaling */
+      section div[style*="width:420px"] {
+        width: 100% !important;
+        min-height: 200px !important;
+      }
+
+      /* Appointment form + fee box */
+      #appointment > div {
+        flex-direction: column;
+      }
+
+      /* Map iframe scaling */
+      #contact iframe {
+        width: 100% !important;
+        height: 220px !important;
+      }
+
+      /* Text & buttons adjust */
+      h2, h3, h4 {
+        font-size: 90% !important;
+      }
+      a, button, input, select, textarea {
+        font-size: 90% !important;
+      }
     }
   </style>
 </head>
@@ -252,3 +301,4 @@
 </body>
 
 </html>
+
