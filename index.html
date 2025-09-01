@@ -133,7 +133,6 @@
       <div style="width:420px;min-height:240px;background:linear-gradient(180deg,#eef2ff, #f8fafc);display:flex;align-items:center;justify-content:center;padding:18px;">
         <!-- Placeholder image area -->
         <div style="width:360px;height:220px;border-radius:10px;background-image:url('https://images.squarespace-cdn.com/content/v1/5d6e95a235c3de0001f8ab16/d9a7026f-1c97-4ae7-bd5a-7fed2c06f50d/vet-image.jpg');background-size:cover;background-position:center;box-shadow:0 8px 20px rgba(2,6,23,.08);"></div>
-         <div style="width:360px;height:220px;border-radius:10px;background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRueAj7oAb12o97aBmlI5I1ZCuFIzj9XGpILA&s');background-size:cover;background-position:bottom;box-shadow:0 8px 20px rgba(2,6,23,.08);"></div>
       </div>
     </div>
   </section>
@@ -201,42 +200,71 @@
   </section>
 
   <!-- Appointment Form -->
-  <section id="appointment" style="max-width:1100px;margin:28px auto;padding:0 16px;">
-    <div style="background:#fff;padding:16px;border-radius:12px;box-shadow:0 12px 30px rgba(2,6,23,.05);display:flex;gap:16px;flex-wrap:wrap;align-items:flex-start;">
-      <div style="flex:1;min-width:260px;">
-        <h3 style="margin:0 0 10px 0;font-size:18px;color:#0b1220;">Book an Appointment</h3>
-        <p style="margin:0 0 12px 0;color:#475569;font-size:14px;">Fill this form and we'll confirm by phone. (Demo: no backend in this project.)</p>
-        <form id="apptForm" style="display:flex;flex-direction:column;gap:10px;">
-          <input required name="name" placeholder="Your name" style="padding:10px;border-radius:8px;border:1px solid #e6eef8;outline:none;font-size:14px;" />
-          <input required name="phone" placeholder="Phone number" style="padding:10px;border-radius:8px;border:1px solid #e6eef8;outline:none;font-size:14px;" />
-          <select required name="service" style="padding:10px;border-radius:8px;border:1px solid #e6eef8;font-size:14px;">
-            <option value="">Select service</option>
-            <option>Routine Checkup</option>
-            <option>Surgery</option>
-            <option>Grooming</option>
-            <option>Diagnostics</option>
-          </select>
-          <input required type="date" name="date" style="padding:10px;border-radius:8px;border:1px solid #e6eef8;font-size:14px;" />
-          <textarea name="note" placeholder="Brief note (symptoms, pet age, breed)" style="padding:10px;border-radius:8px;border:1px solid #e6eef8;font-size:14px;min-height:80px;"></textarea>
-          <div style="display:flex;gap:8px;">
-            <button type="submit" style="background:#0b1220;color:#fff;padding:10px 14px;border-radius:8px;border:none;font-weight:700;">Submit</button>
-            <button type="button" id="payBtn" style="background:#06b6d4;color:#0b1220;padding:10px 14px;border-radius:8px;border:none;font-weight:700;">Pay Online (Demo)</button>
-          </div>
-        </form>
-        <div id="apptMsg" style="margin-top:10px;font-size:13px;color:#065f46;display:none;">Appointment received — we'll call to confirm.</div>
+<section id="appointment" style="max-width:1100px;margin:28px auto;padding:0 16px;">
+  <div style="background:#fff;padding:16px;border-radius:12px;box-shadow:0 12px 30px rgba(2,6,23,.05);display:flex;gap:16px;flex-wrap:wrap;align-items:flex-start;">
+    
+    <!-- Left Column: Appointment Form -->
+    <div style="flex:1;min-width:260px;">
+      <h3 style="margin:0 0 10px 0;font-size:18px;color:#0b1220;">Book an Appointment</h3>
+      <p style="margin:0 0 12px 0;color:#475569;font-size:14px;">Fill this form and we'll confirm by phone. (Demo: no backend in this project.)</p>
+      <form id="apptForm" style="display:flex;flex-direction:column;gap:10px;">
+        <input required name="name" placeholder="Your name" style="padding:10px;border-radius:8px;border:1px solid #e6eef8;outline:none;font-size:14px;" />
+        <input required name="phone" placeholder="Phone number" style="padding:10px;border-radius:8px;border:1px solid #e6eef8;outline:none;font-size:14px;" />
+        <select required name="service" style="padding:10px;border-radius:8px;border:1px solid #e6eef8;font-size:14px;">
+          <option value="">Select service</option>
+          <option>Routine Checkup</option>
+          <option>Surgery</option>
+          <option>Grooming</option>
+          <option>Diagnostics</option>
+        </select>
+        <input required type="date" name="date" style="padding:10px;border-radius:8px;border:1px solid #e6eef8;font-size:14px;" />
+        <textarea name="note" placeholder="Brief note (symptoms, pet age, breed)" style="padding:10px;border-radius:8px;border:1px solid #e6eef8;font-size:14px;min-height:80px;"></textarea>
+        <div style="display:flex;gap:8px;">
+          <button type="submit" style="background:#0b1220;color:#fff;padding:10px 14px;border-radius:8px;border:none;font-weight:700;">Submit</button>
+          <button type="button" id="payBtn" style="background:#06b6d4;color:#0b1220;padding:10px 14px;border-radius:8px;border:none;font-weight:700;">Pay Online (Demo)</button>
+        </div>
+      </form>
+      <div id="apptMsg" style="margin-top:10px;font-size:13px;color:#065f46;display:none;">Appointment received — we'll call to confirm.</div>
+    </div>
+
+    <!-- Right Column: Fees + Payment Methods -->
+    <div style="width:360px;min-width:240px;background:#f8fafc;padding:14px;border-radius:10px;">
+      <h4 style="margin:0 0 8px 0;font-size:15px;color:#0b1220;">Consultation Fees (Sample)</h4>
+      <div style="font-size:14px;color:#475569;line-height:1.6;">
+        <div>Consultation: 500–800 BDT</div>
+        <div>Vaccination: 200–500 BDT</div>
+        <div>Grooming: From 700 BDT</div>
+        <div>Minor Surgery: From 1500 BDT</div>
       </div>
 
-      <div style="width:360px;min-width:240px;background:#f8fafc;padding:14px;border-radius:10px;">
-        <h4 style="margin:0 0 8px 0;font-size:15px;color:#0b1220;">Consultation Fees (Sample)</h4>
-        <div style="font-size:14px;color:#475569;line-height:1.6;">
-          <div>Consultation: 500–800 BDT</div>
-          <div>Vaccination: 200–500 BDT</div>
-          <div>Grooming: From 700 BDT</div>
-          <div>Minor Surgery: From 1500 BDT</div>
+      <!-- Payment Methods Section -->
+      <div style="margin-top:16px;font-size:14px;color:#475569;">
+        <strong>Select Payment Method:</strong>
+        <div style="display:flex;flex-direction:column;gap:10px;margin-top:8px;">
+          
+          <label style="display:flex;align-items:center;gap:6px;cursor:pointer;">
+            <input type="radio" name="payment" value="bkash" required>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/39/Bkash_logo.png" alt="bKash" style="height:22px;">
+            <span>bKash</span>
+          </label>
+
+          <label style="display:flex;align-items:center;gap:6px;cursor:pointer;">
+            <input type="radio" name="payment" value="nagad">
+            <img src="https://download.logo.wine/logo/Nagad/Nagad-Logo.wine.png" alt="Nagad" style="height:22px;">
+            <span>Nagad</span>
+          </label>
+
+          <label style="display:flex;align-items:center;gap:6px;cursor:pointer;">
+            <input type="radio" name="payment" value="rocket">
+            <img src="https://www.dutchbanglabank.com/wp-content/uploads/2022/02/rocket-logo.png" alt="Rocket" style="height:22px;">
+            <span>DBBL Rocket</span>
+          </label>
+
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- Testimonials -->
   <section style="max-width:1100px;margin:20px auto;padding:0 16px;">
@@ -311,6 +339,7 @@
 </body>
 
 </html>
+
 
 
 
